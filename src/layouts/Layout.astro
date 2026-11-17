@@ -21,7 +21,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f4f2ec" />
+    <meta name="theme-color" content="#111310" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +39,6 @@ const base = import.meta.env.BASE_URL.endsWith('/')
       <nav aria-label="Hauptnavigation">
         <a class:list={{ active: activePage === 'collections' }} href={`${base}collections/`}>Portfolio</a>
         <a class:list={{ active: activePage === 'about' }} href={`${base}about/`}>Über mich</a>
-        <a class="nav-contact" href="https://www.instagram.com/_mariusmeyer_">Instagram <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -52,7 +51,6 @@ const base = import.meta.env.BASE_URL.endsWith('/')
         <span class="wordmark-mark">MM</span>
         <span class="wordmark-name">Marius Meyer<span class="wordmark-dot">.</span></span>
       </a>
-      <p>Mit Ruhe gesehen. Für immer festgehalten.</p>
       <div class="footer-links">
         <a href={`${base}datenschutzerklaerung/`}>Datenschutz</a>
         <a href={`${base}impressum/`}>Impressum</a>
@@ -65,14 +63,14 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 <style is:global>
   :root {
     font-family: 'DM Sans', sans-serif;
-    color: #20231f;
-    background: #f4f2ec;
+    color: #efeee8;
+    background: #111310;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
-    --paper: #f4f2ec;
-    --ink: #20231f;
-    --muted: #777a72;
-    --accent: #c35d3b;
+    --paper: #191c18;
+    --ink: #efeee8;
+    --muted: #a4a69e;
+    --accent: #d47754;
   }
 
   * { box-sizing: border-box; }
@@ -83,7 +81,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   button { font: inherit; }
   .site-header {
     height: 86px; padding: 0 7.2%; display: flex; align-items: center;
-    justify-content: space-between; border-bottom: 1px solid rgba(32, 35, 31, .1);
+    justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, .12);
   }
   .wordmark { display: inline-flex; align-items: center; gap: 11px; }
   .wordmark-mark {
@@ -95,13 +93,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   nav { display: flex; align-items: center; gap: 38px; font-size: 12px; }
   nav a { transition: color .2s ease; }
   nav a:hover, nav a.active { color: var(--accent); }
-  nav .nav-contact { display: flex; align-items: center; gap: 9px; }
   .site-footer {
     padding: 31px 7.2%; display: flex; align-items: center; justify-content: space-between;
-    border-top: 1px solid rgba(32, 35, 31, .14); font-size: 11px; color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, .14); font-size: 11px; color: var(--muted);
   }
   .footer-wordmark { color: var(--ink); }
-  .site-footer p { margin: 0; }
   .footer-links { display: flex; gap: 16px; }
   .footer-links a:hover { color: var(--ink); }
   .copyright { white-space: nowrap; }
@@ -123,7 +119,6 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     nav a:first-child { display: none; }
     .wordmark-name { font-size: 13px; }
     .site-footer { padding: 25px 6%; flex-wrap: wrap; gap: 18px; }
-    .site-footer p { order: 3; width: 100%; }
     .copyright { margin-left: auto; }
   }
 </style>

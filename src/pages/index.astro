@@ -36,7 +36,6 @@ const landscape = featuredPhotos[0];
         fetchpriority="high"
       />
       <span class="image-caption">AUS DER GALERIE LANDSCHAFT</span>
-      <span class="hero-image-number">01</span>
     </div>
     <a class="scroll-hint" href="#arbeiten"><span></span> Scrollen</a>
   </section>
@@ -95,7 +94,6 @@ const landscape = featuredPhotos[0];
 
   <section class="closing">
     <span class="eyebrow">Unterwegs verbunden</span>
-    <h2 class="serif">Viel Spaß beim<br />Stöbern durch <em>meine Bilder.</em></h2>
     <div class="social-links">
       <a class="text-link" href="https://www.instagram.com/_mariusmeyer_">Instagram <span aria-hidden="true">↗</span></a>
       <a class="text-link" href="https://www.komoot.com/de-de/user/507278383378">Komoot <span aria-hidden="true">↗</span></a>
@@ -114,18 +112,17 @@ const landscape = featuredPhotos[0];
   h1 em, h2 em { color: var(--accent); font-weight: 500; }
   .hero-description { max-width: 360px; margin: 0 0 28px; color: var(--muted); font-size: 13px; line-height: 1.8; }
   .hero-index { display: block; margin-top: 84px; font-size: 10px; letter-spacing: .1em; }
-  .hero-index span { padding: 0 7px; color: #a9aaa3; }
+  .hero-index span { padding: 0 7px; color: #85877f; }
   .hero-image-wrap { position: relative; height: min(590px, 73vh); min-height: 400px; }
   .hero-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .image-caption { position: absolute; right: 18px; bottom: 17px; color: white; font-size: 9px; letter-spacing: .13em; text-shadow: 0 1px 5px #000; }
-  .hero-image-number { position: absolute; top: -19px; right: -17px; color: var(--accent); font-family: 'Playfair Display', Georgia, serif; font-size: 48px; }
   .scroll-hint { position: absolute; bottom: 35px; left: 7.2%; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 10px; }
   .scroll-hint span { width: 30px; height: 1px; background: var(--accent); }
   .intro { padding: 120px 10% 128px; }
   .section-label { display: flex; gap: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 10px; }
   .section-label span { color: var(--accent); }
   .intro-main { display: flex; align-items: end; justify-content: space-between; margin: 34px 0 46px; }
-  .intro-main h2, .statement h2, .closing h2 { margin: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.05em; }
+  .intro-main h2, .statement h2 { margin: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.05em; }
   .intro-main p { max-width: 370px; margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
   .intro-main > .text-link { margin: 0 0 8px; }
   .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
@@ -133,7 +130,7 @@ const landscape = featuredPhotos[0];
   .photo-card-3 { margin-top: 20px; }
   .photo-card-4 { margin-top: 55px; }
   .photo-card-5 { margin-top: 12px; }
-  .photo-frame { position: relative; overflow: hidden; background: #dedbd2; aspect-ratio: 4 / 5; }
+  .photo-frame { position: relative; overflow: hidden; background: #252823; aspect-ratio: 4 / 5; }
   .photo-card-2 .photo-frame { aspect-ratio: 4 / 5.4; }
   .photo-card-3 .photo-frame { aspect-ratio: 4 / 4.7; }
   .photo-frame img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
@@ -144,15 +141,14 @@ const landscape = featuredPhotos[0];
   .photo-meta h3 { margin: 0 0 5px; font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 500; }
   .photo-meta span { color: var(--muted); font-size: 10px; }
   .photo-meta .photo-category { padding-top: 4px; }
-  .statement { min-height: 640px; display: grid; grid-template-columns: 1fr 1fr; background: #e9e7df; }
+  .statement { min-height: 640px; display: grid; grid-template-columns: 1fr 1fr; background: #1b1e19; }
   .statement-image { min-height: 640px; }
   .statement-image img { width: 100%; height: 100%; object-fit: cover; }
   .statement-copy { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 90px 12%; }
   .statement-copy h2 { margin-top: 31px; font-size: clamp(40px, 4.4vw, 58px); }
   .statement-copy p { max-width: 400px; margin: 22px 0 28px; color: var(--muted); font-size: 12px; line-height: 1.9; }
-  .statement-note { position: absolute; right: 12%; bottom: 28px; color: #92938c; font-size: 8px; letter-spacing: .15em; }
+  .statement-note { position: absolute; right: 12%; bottom: 28px; color: #a4a69e; font-size: 8px; letter-spacing: .15em; }
   .closing { padding: 125px 20px 135px; text-align: center; }
-  .closing h2 { margin: 25px 0 27px; font-size: clamp(42px, 5.2vw, 68px); }
   .social-links { display: flex; justify-content: center; gap: 26px; }
 
   @media (max-width: 900px) {
@@ -169,7 +165,6 @@ const landscape = featuredPhotos[0];
     .hero-description { max-width: 390px; }
     .hero-index { display: none; }
     .hero-image-wrap { height: 70vw; min-height: 290px; }
-    .hero-image-number { right: -8px; font-size: 39px; }
     .scroll-hint { display: none; }
     .intro { padding: 80px 6% 88px; }
     .intro-main { margin: 27px 0 32px; display: block; }
