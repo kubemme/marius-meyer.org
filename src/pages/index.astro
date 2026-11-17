@@ -54,7 +54,7 @@ const featuredPhotos = galleryCategories.map((category) => ({
             class:list={['photo-frame', { 'photo-frame-portrait': photo.aspectRatio < 1 }]}
             style={`--photo-image: url('${base}${photo.image}')`}
           >
-            <img src={`${base}${photo.image}`} alt={photo.alt} loading="lazy" />
+            <img src={`${base}${photo.image}`} alt="" loading="lazy" />
           </div>
           <div class="photo-meta">
             <div><h3>{photo.title}</h3><span>{photo.location}</span></div>

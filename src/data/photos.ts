@@ -52,13 +52,10 @@ export const galleryCategories = galleryData.map(({ slug, title, photos }) => ({
 }));
 
 export const photos = galleryData.flatMap((gallery) =>
-  gallery.photos.map((photo, index) => ({
-    title: `Foto ${String(index + 1).padStart(2, '0')}`,
+  gallery.photos.map((photo) => ({
     category: gallery.title,
     categorySlug: gallery.slug,
-    location: `Galerie ${gallery.title}`,
     image: photo.src,
-    alt: photo.alt,
     aspectRatio: photoAspectRatios[photo.src] ?? 1.5,
     original: `https://marius-meyer.org/user/pages/${originalFolders[gallery.slug]}/${encodeURIComponent(photo.filename)}`,
   })),
