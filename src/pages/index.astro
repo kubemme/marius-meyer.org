@@ -8,18 +8,17 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 const featuredPhotos = galleryCategories.map((category) => ({
   ...photos.find((photo) => photo.categorySlug === category.slug)!,
   title: category.title,
-  location: `${category.count} Fotografien`,
+  location: `${category.count} Fotos`,
 }));
 ---
 
 <Layout
-  title="Marius Meyer — Fotografien von unterwegs"
-  description="Landschaft, Natur und besondere Momente unterwegs. Fotografien von Marius Meyer aus der Nähe von Köln."
+  title="Marius Meyer - Portfolio"
 >
   <section class="hero">
     <div class="hero-copy">
       <span class="eyebrow">Marius Meyer</span>
-      <h1 class="serif">Der Typ mit der<br /><em>Sonnenbrille</em></h1>
+      <h1 class="serif">Der Typ<br />mit der<br /><em>Sonnenbrille</em></h1>
       <p class="hero-description">
         Das bin ich, Marius – Hobbyfotograf aus der Nähe von Köln.
       </p>
@@ -32,13 +31,11 @@ const featuredPhotos = galleryCategories.map((category) => ({
         alt="Marius Meyer mit Sonnenbrille und Outdoorjacke"
         fetchpriority="high"
       />
-      <span class="image-caption">MARIUS MEYER — HOBBYFOTOGRAF</span>
     </div>
-    <a class="scroll-hint" href="#arbeiten"><span></span> Scrollen</a>
   </section>
 
   <section class="intro" id="arbeiten">
-    <div class="section-label"><span>01</span> Meine Galerien</div>
+    <div class="section-label">Mein Portfolio</div>
     <div class="intro-main">
       <div>
         <h2 class="serif">Erlebnisse,<br /><em>festgehalten.</em></h2>
