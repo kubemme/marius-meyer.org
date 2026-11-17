@@ -40,8 +40,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
             <img src={`${base}${photo.image}`} alt={photo.alt} loading={index < 6 ? 'eager' : 'lazy'} />
           </a>
           <div class="gallery-meta">
-            <div><h2 class="serif">{photo.title}</h2><p>{photo.location}</p></div>
-            <span>{photo.category}</span>
+            <h2 class="serif">{photo.title}</h2>
           </div>
         </article>
       ))}
@@ -184,10 +183,8 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   .gallery-image { position: relative; display: block; height: var(--row-height, 220px); overflow: hidden; background: #252823; }
   .gallery-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
   .gallery-item:hover img { transform: scale(1.03); }
-  .gallery-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding-top: 13px; }
-  .gallery-meta h2 { margin: 0 0 5px; font-size: 17px; font-weight: 500; }
-  .gallery-meta p, .gallery-meta > span { margin: 0; color: var(--muted); font-size: 10px; }
-  .gallery-meta > span { padding-top: 4px; }
+  .gallery-meta { padding-top: 13px; }
+  .gallery-meta h2 { margin: 0; font-size: 17px; font-weight: 500; }
   .lightbox {
     max-width: 100vw;
     max-height: 100vh;
