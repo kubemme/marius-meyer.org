@@ -53,4 +53,4 @@ Run `npm run build` to check the changes. Push them to `main` to trigger the Git
 
 ## GitHub Pages
 
-The workflow builds the Astro site and deploys `dist/` through GitHub Actions when changes are pushed to `main`. Under **Settings → Pages → Build and deployment**, set the source to **GitHub Actions**. The project URL and base path are configured in `astro.config.mjs`.
+The workflow builds the Astro site and deploys `dist/` through GitHub Actions when changes are pushed to `main`. Under **Settings → Pages → Build and deployment**, set the source to **GitHub Actions**. The custom domain is `marius-meyer.org` (configured in `public/CNAME`), and the canonical site URL is set in `astro.config.mjs`. Point the domain's DNS records to GitHub Pages and confirm the custom domain under **Settings → Pages**.
