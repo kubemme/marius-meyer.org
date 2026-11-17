@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import { photos } from '../data/photos';
 
 const featuredPhotos = photos.filter((photo) => photo.featured);
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <Layout>
@@ -14,7 +17,7 @@ const featuredPhotos = photos.filter((photo) => photo.featured);
         Ich bin Marius – Fotograf und neugieriger Beobachter. Immer auf der Suche nach
         dem besonderen Licht und den leisen Geschichten dazwischen.
       </p>
-      <a class="text-link" href="/collections">Arbeiten entdecken <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href={`${base}collections/`}>Arbeiten entdecken <span aria-hidden="true">↗</span></a>
       <span class="hero-index">01 <span>/</span> 03</span>
     </div>
     <div class="hero-image-wrap">
@@ -37,11 +40,11 @@ const featuredPhotos = photos.filter((photo) => photo.featured);
         <h2 class="serif">Momente, die<br /><em>bleiben.</em></h2>
         <p>Ein paar Lieblingsbilder aus unterwegs sein, ankommen und genau hinsehen.</p>
       </div>
-      <a class="text-link" href="/collections">Alle Arbeiten <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href={`${base}collections/`}>Alle Arbeiten <span aria-hidden="true">↗</span></a>
     </div>
     <div class="featured-grid">
       {featuredPhotos.map((photo, index) => (
-        <a class:list={['photo-card', `photo-card-${index + 1}`]} href="/collections">
+        <a class:list={['photo-card', `photo-card-${index + 1}`]} href={`${base}collections/`}>
           <div class="photo-frame">
             <img src={photo.image} alt={photo.alt} loading="lazy" />
             <span class="photo-arrow" aria-hidden="true">↗</span>
@@ -70,7 +73,7 @@ const featuredPhotos = photos.filter((photo) => photo.featured);
         Für mich beginnt ein gutes Bild mit Zeit. Zeit, einen Ort kennenzulernen,
         Licht zu beobachten und den Moment einfach passieren zu lassen.
       </p>
-      <a class="text-link" href="/about">Mehr über mich <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href={`${base}about/`}>Mehr über mich <span aria-hidden="true">↗</span></a>
       <span class="statement-note">MARIUS MEYER — FOTOGRAF AUS LEIDENSCHAFT</span>
     </div>
   </section>
