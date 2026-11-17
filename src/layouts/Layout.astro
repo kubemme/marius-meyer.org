@@ -53,9 +53,9 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     <footer class="site-footer">
       <nav class="social-strip" aria-label="Social Media">
         <span class="eyebrow">Social Media</span>
-        <a href="https://www.instagram.com/_mariusmeyer_">Instagram</a>
-        <a href="https://www.komoot.com/de-de/user/507278383378">Komoot</a>
-        <a href="https://www.polarsteps.com/tetraodontiform">Polarsteps</a>
+        <a href="https://www.instagram.com/_mariusmeyer_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.komoot.com/de-de/user/507278383378" target="_blank" rel="noopener noreferrer">Komoot</a>
+        <a href="https://www.polarsteps.com/tetraodontiform" target="_blank" rel="noopener noreferrer">Polarsteps</a>
       </nav>
       <div class="footer-main">
         <a class="wordmark footer-wordmark" href={base}>
@@ -112,7 +112,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   .social-strip a:hover { color: var(--accent); }
   .footer-main {
     padding: 31px 7.2%; display: flex; align-items: center; justify-content: space-between;
-    font-size: 11px;
+    border-top: 1px solid rgba(255, 255, 255, .12); font-size: 11px;
   }
   .footer-wordmark { color: var(--ink); }
   .footer-links { display: flex; gap: 16px; }
