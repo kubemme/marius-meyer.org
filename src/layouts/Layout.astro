@@ -35,9 +35,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     <header class="site-header">
       <a class="wordmark" href={base} aria-label="Marius Meyer – Startseite">
         <span class="wordmark-mark" aria-hidden="true">
-          <svg viewBox="0 0 36 36">
-            <path d="M5 29V7L11.5 15L18 7V29V7L24.5 15L31 7V29" />
-          </svg>
+          <img src={`${base}favicon.svg`} alt="" />
         </span>
         <span class="wordmark-name">Marius Meyer<span class="wordmark-dot">.</span></span>
       </a>
@@ -90,13 +88,8 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   .wordmark { display: inline-flex; align-items: center; gap: 11px; }
   .wordmark-mark {
     display: grid; place-items: center; width: 35px; height: 35px;
-    border: 1px solid var(--ink); border-radius: 50%;
   }
-  .wordmark-mark svg { width: 100%; height: 100%; overflow: visible; }
-  .wordmark-mark path {
-    fill: none; stroke: var(--ink); stroke-width: 1.6;
-    stroke-linecap: round; stroke-linejoin: round;
-  }
+  .wordmark-mark img { width: 100%; height: 100%; }
   .wordmark-name { font-size: 14px; font-weight: 600; letter-spacing: -.04em; }
   .wordmark-dot { color: var(--accent); }
   nav { display: flex; align-items: center; gap: 38px; font-size: 12px; }
