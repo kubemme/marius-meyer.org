@@ -41,7 +41,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
             style={`--photo-image: url('${base}${photo.image}'); --portrait-width: ${(photo.aspectRatio / 1.5) * 100}%`}
             aria-label={`Foto ${String(index + 1).padStart(2, '0')} aus ${photo.category} in Originalgröße öffnen`}
           >
-            <img src={`${base}${photo.image}`} alt="" loading={index < 6 ? 'eager' : 'lazy'} />
+            <img src={`${base}${photo.image}`} alt="" loading="lazy" />
           </a>
         </article>
       ))}
