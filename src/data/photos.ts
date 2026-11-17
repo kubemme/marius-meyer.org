@@ -1,13 +1,5 @@
 import galleryData from './galleries.json';
 
-const originalFolders: Record<string, string> = {
-  landschaft: '01.landschaft',
-  tiere: '02.tiere',
-  stadt: '03.stadt',
-  abstrakt: '04.abstrakt',
-  nacht: '05.nacht',
-};
-
 const photoAspectRatios: Record<string, number> = {
   'images/gallery/landschaft/03.jpg': 444 / 250,
   'images/gallery/landschaft/04.jpg': 444 / 250,
@@ -57,6 +49,6 @@ export const photos = galleryData.flatMap((gallery) =>
     categorySlug: gallery.slug,
     image: photo.src,
     aspectRatio: photoAspectRatios[photo.src] ?? 1.5,
-    original: `https://marius-meyer.org/user/pages/${originalFolders[gallery.slug]}/${encodeURIComponent(photo.filename)}`,
+    original: `images/originals/${gallery.slug}/${encodeURIComponent(photo.filename)}`,
   })),
 );

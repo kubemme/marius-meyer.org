@@ -37,7 +37,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
         >
           <a
             class:list={['gallery-image', { 'gallery-image-portrait': photo.aspectRatio < 1 }]}
-            href={photo.original}
+            href={`${base}${photo.original}`}
             style={`--photo-image: url('${base}${photo.image}'); --portrait-width: ${(photo.aspectRatio / 1.5) * 100}%`}
             aria-label={`Foto ${String(index + 1).padStart(2, '0')} aus ${photo.category} in Originalgröße öffnen`}
           >

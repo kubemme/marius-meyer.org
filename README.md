@@ -37,17 +37,17 @@ Gallery data is stored in `src/data/galleries.json`. Local thumbnail images live
    'images/gallery/landschaft/22.jpg': 167 / 250,
    ```
 
-4. Upload the original image to the existing `marius-meyer.org` site as well. The lightbox loads originals from `https://marius-meyer.org/user/pages/`, using these category folders:
+4. Add the original image to `public/images/originals/<category>/` with the same filename. The lightbox loads originals locally from `/images/originals/<category>/`:
 
-   | Category | Original folder |
+   | Category | Folder |
    | --- | --- |
-   | Landscape | `01.landschaft` |
-   | Animals | `02.tiere` |
-   | City | `03.stadt` |
-   | Abstract | `04.abstrakt` |
-   | Night | `05.nacht` |
+   | Landscape | `public/images/originals/landschaft/` |
+   | Animals | `public/images/originals/tiere/` |
+   | City | `public/images/originals/stadt/` |
+   | Abstract | `public/images/originals/abstrakt/` |
+   | Night | `public/images/originals/nacht/` |
 
-   For example, the landscape original in the JSON entry above must be available at `user/pages/01.landschaft/A7_12345.jpg`.
+   For example, the landscape original in the JSON entry above must be available at `public/images/originals/landschaft/A7_12345.jpg`.
 
 Run `npm run build` to check the changes. Push them to `main` to trigger the GitHub Actions deployment.
 
