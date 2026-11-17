@@ -10,7 +10,6 @@ const featuredPhotos = galleryCategories.map((category) => ({
   title: category.title,
   location: `${category.count} Fotografien`,
 }));
-const landscape = featuredPhotos[0];
 ---
 
 <Layout
@@ -19,23 +18,22 @@ const landscape = featuredPhotos[0];
 >
   <section class="hero">
     <div class="hero-copy">
-      <span class="eyebrow">Fotografie &amp; Erinnerungen</span>
-      <h1 class="serif">Unterwegs.<br />Mit offenen<br /><em>Augen.</em></h1>
+      <span class="eyebrow">Über mich</span>
+      <h1 class="serif">Der Mensch<br />hinter der<br /><em>Kamera.</em></h1>
       <p class="hero-description">
-        Ich bin Marius, Hobbyfotograf aus der Nähe von Köln. Ich halte die besonderen
-        Momente fest, die auf Wanderungen, Reisen und draußen unterwegs entstehen.
+        Das bin ich, Marius – Hobbyfotograf aus der Nähe von Köln. Ich fotografiere
+        Landschaften, Natur und besondere Momente unterwegs.
       </p>
-      <a class="text-link" href={`${base}collections/`}>Bilder entdecken <span aria-hidden="true">↗</span></a>
-      <span class="hero-index">01 <span>/</span> 05</span>
+      <a class="text-link" href={`${base}about/`}>Meine Geschichte <span aria-hidden="true">↗</span></a>
     </div>
     <div class="hero-image-wrap">
       <img
         class="hero-image"
-        src={`${base}images/featured/landscape.jpg`}
-        alt={landscape.alt}
+        src={`${base}images/about.jpg`}
+        alt="Marius Meyer mit Sonnenbrille und Outdoorjacke"
         fetchpriority="high"
       />
-      <span class="image-caption">AUS DER GALERIE LANDSCHAFT</span>
+      <span class="image-caption">MARIUS MEYER — HOBBYFOTOGRAF</span>
     </div>
     <a class="scroll-hint" href="#arbeiten"><span></span> Scrollen</a>
   </section>
@@ -71,29 +69,8 @@ const landscape = featuredPhotos[0];
     </div>
   </section>
 
-  <section class="statement">
-    <div class="statement-image">
-      <img
-        src={`${base}images/about.jpg`}
-        alt="Marius Meyer mit Sonnenbrille und Outdoorjacke"
-        loading="lazy"
-      />
-    </div>
-    <div class="statement-copy">
-      <span class="eyebrow">Der Mensch hinter der Kamera</span>
-      <h2 class="serif">Nicht nur Motive.<br /><em>Erinnerungen.</em></h2>
-      <p>
-        Viel wichtiger als die Kamera ist für mich das Erlebnis dahinter: eine Wanderung
-        durch einen stillen Wald, ein weiter Blick über die Berge oder ein Moment,
-        in dem Licht und Landschaft zusammenpassen.
-      </p>
-      <a class="text-link" href={`${base}about/`}>Über mich <span aria-hidden="true">↗</span></a>
-      <span class="statement-note">MARIUS MEYER — HOBBYFOTOGRAF AUS DER NÄHE VON KÖLN</span>
-    </div>
-  </section>
-
   <section class="closing">
-    <span class="eyebrow">Unterwegs verbunden</span>
+    <p class="eyebrow">Unterwegs verbunden</p>
     <div class="social-links">
       <a class="text-link" href="https://www.instagram.com/_mariusmeyer_">Instagram <span aria-hidden="true">↗</span></a>
       <a class="text-link" href="https://www.komoot.com/de-de/user/507278383378">Komoot <span aria-hidden="true">↗</span></a>
@@ -111,8 +88,6 @@ const landscape = featuredPhotos[0];
   h1 { margin: 27px 0 21px; font-size: clamp(58px, 7.7vw, 106px); line-height: .96; letter-spacing: -.065em; }
   h1 em, h2 em { color: var(--accent); font-weight: 500; }
   .hero-description { max-width: 360px; margin: 0 0 28px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-  .hero-index { display: block; margin-top: 84px; font-size: 10px; letter-spacing: .1em; }
-  .hero-index span { padding: 0 7px; color: #85877f; }
   .hero-image-wrap { position: relative; height: min(590px, 73vh); min-height: 400px; }
   .hero-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .image-caption { position: absolute; right: 18px; bottom: 17px; color: white; font-size: 9px; letter-spacing: .13em; text-shadow: 0 1px 5px #000; }
@@ -122,7 +97,7 @@ const landscape = featuredPhotos[0];
   .section-label { display: flex; gap: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 10px; }
   .section-label span { color: var(--accent); }
   .intro-main { display: flex; align-items: end; justify-content: space-between; margin: 34px 0 46px; }
-  .intro-main h2, .statement h2 { margin: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.05em; }
+  .intro-main h2 { margin: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.05em; }
   .intro-main p { max-width: 370px; margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
   .intro-main > .text-link { margin: 0 0 8px; }
   .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
@@ -141,29 +116,19 @@ const landscape = featuredPhotos[0];
   .photo-meta h3 { margin: 0 0 5px; font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 500; }
   .photo-meta span { color: var(--muted); font-size: 10px; }
   .photo-meta .photo-category { padding-top: 4px; }
-  .statement { min-height: 640px; display: grid; grid-template-columns: 1fr 1fr; background: #1b1e19; }
-  .statement-image { min-height: 640px; }
-  .statement-image img { width: 100%; height: 100%; object-fit: cover; }
-  .statement-copy { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 90px 12%; }
-  .statement-copy h2 { margin-top: 31px; font-size: clamp(40px, 4.4vw, 58px); }
-  .statement-copy p { max-width: 400px; margin: 22px 0 28px; color: var(--muted); font-size: 12px; line-height: 1.9; }
-  .statement-note { position: absolute; right: 12%; bottom: 28px; color: #a4a69e; font-size: 8px; letter-spacing: .15em; }
   .closing { padding: 125px 20px 135px; text-align: center; }
   .social-links { display: flex; justify-content: center; gap: 26px; }
 
   @media (max-width: 900px) {
     .hero { padding-left: 6%; padding-right: 6%; gap: 3%; }
     .hero-image-wrap { min-height: 350px; }
-    .hero-index { margin-top: 55px; }
     .intro { padding-left: 7%; padding-right: 7%; }
-    .statement-copy { padding: 70px 9%; }
   }
   @media (max-width: 650px) {
     .hero { min-height: unset; padding: 52px 6% 75px; grid-template-columns: 1fr; gap: 32px; }
     .hero-copy { padding: 0; }
     h1 { margin: 21px 0 17px; font-size: clamp(61px, 17vw, 88px); }
     .hero-description { max-width: 390px; }
-    .hero-index { display: none; }
     .hero-image-wrap { height: 70vw; min-height: 290px; }
     .scroll-hint { display: none; }
     .intro { padding: 80px 6% 88px; }
@@ -176,11 +141,6 @@ const landscape = featuredPhotos[0];
     .photo-meta { padding-top: 10px; }
     .photo-meta h3 { font-size: 15px; }
     .photo-meta .photo-category { display: none; }
-    .statement { grid-template-columns: 1fr; }
-    .statement-image { min-height: 0; height: 78vw; }
-    .statement-copy { min-height: 410px; padding: 70px 8%; }
-    .statement-copy h2 { font-size: 48px; }
-    .statement-note { right: 8%; }
     .closing { padding: 90px 16px 100px; }
     .social-links { flex-wrap: wrap; gap: 18px; }
   }
