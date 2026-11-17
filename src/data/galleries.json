@@ -1,0 +1,382 @@
+[
+  {
+    "slug": "landschaft",
+    "path": "/",
+    "title": "Landschaft",
+    "photos": [
+      {
+        "src": "images/gallery/landschaft/01.jpg",
+        "alt": "Landschaft – Foto 01",
+        "filename": "A7_08185-HDR.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/02.jpg",
+        "alt": "Landschaft – Foto 02",
+        "filename": "A7_08238-HDR.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/03.jpg",
+        "alt": "Landschaft – Foto 03",
+        "filename": "A7_04338-HDR.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/04.jpg",
+        "alt": "Landschaft – Foto 04",
+        "filename": "A7_04593.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/05.jpg",
+        "alt": "Landschaft – Foto 05",
+        "filename": "A7_00127.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/06.jpeg",
+        "alt": "Landschaft – Foto 06",
+        "filename": "A7408596.jpeg"
+      },
+      {
+        "src": "images/gallery/landschaft/07.jpeg",
+        "alt": "Landschaft – Foto 07",
+        "filename": "A7408511.jpeg"
+      },
+      {
+        "src": "images/gallery/landschaft/08.jpg",
+        "alt": "Landschaft – Foto 08",
+        "filename": "A7_07559.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/09.jpg",
+        "alt": "Landschaft – Foto 09",
+        "filename": "A7_09111_edit.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/10.jpg",
+        "alt": "Landschaft – Foto 10",
+        "filename": "A7_07681.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/11.jpg",
+        "alt": "Landschaft – Foto 11",
+        "filename": "A7404607-HDR.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/12.jpg",
+        "alt": "Landschaft – Foto 12",
+        "filename": "A7403060-Pano.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/13.jpg",
+        "alt": "Landschaft – Foto 13",
+        "filename": "A7_07236.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/14.jpg",
+        "alt": "Landschaft – Foto 14",
+        "filename": "A7_07489.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/15.jpg",
+        "alt": "Landschaft – Foto 15",
+        "filename": "A7_08978.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/16.jpg",
+        "alt": "Landschaft – Foto 16",
+        "filename": "A7_04784-HDR.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/17.jpg",
+        "alt": "Landschaft – Foto 17",
+        "filename": "A7_05047.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/18.jpg",
+        "alt": "Landschaft – Foto 18",
+        "filename": "A7_04494.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/19.jpg",
+        "alt": "Landschaft – Foto 19",
+        "filename": "A7_07112.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/20.jpg",
+        "alt": "Landschaft – Foto 20",
+        "filename": "A7_07212.jpg"
+      },
+      {
+        "src": "images/gallery/landschaft/21.jpg",
+        "alt": "Landschaft – Foto 21",
+        "filename": "A7_09284.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "tiere",
+    "path": "/tiere",
+    "title": "Tiere",
+    "photos": [
+      {
+        "src": "images/gallery/tiere/01.jpg",
+        "alt": "Tiere – Foto 01",
+        "filename": "DSC00965.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/02.jpg",
+        "alt": "Tiere – Foto 02",
+        "filename": "A7404076.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/03.jpg",
+        "alt": "Tiere – Foto 03",
+        "filename": "A7404489.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/04.jpg",
+        "alt": "Tiere – Foto 04",
+        "filename": "A7_06789.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/05.jpg",
+        "alt": "Tiere – Foto 05",
+        "filename": "A7_04672-Verbessert.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/06.jpg",
+        "alt": "Tiere – Foto 06",
+        "filename": "A7404129.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/07.jpg",
+        "alt": "Tiere – Foto 07",
+        "filename": "A7405906-Verbessert-SR.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/08.jpg",
+        "alt": "Tiere – Foto 08",
+        "filename": "A7_07081.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/09.jpg",
+        "alt": "Tiere – Foto 09",
+        "filename": "A7_05622-Verbessert.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/10.jpg",
+        "alt": "Tiere – Foto 10",
+        "filename": "A7404301.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/11.jpg",
+        "alt": "Tiere – Foto 11",
+        "filename": "DSC00691.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/12.jpg",
+        "alt": "Tiere – Foto 12",
+        "filename": "A7405916-Verbessert-SR.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/13.jpg",
+        "alt": "Tiere – Foto 13",
+        "filename": "A7_07120.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/14.jpg",
+        "alt": "Tiere – Foto 14",
+        "filename": "A7_05782_new.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/15.jpeg",
+        "alt": "Tiere – Foto 15",
+        "filename": "Pygmie.jpeg"
+      },
+      {
+        "src": "images/gallery/tiere/16.jpg",
+        "alt": "Tiere – Foto 16",
+        "filename": "DSC00099.jpg"
+      },
+      {
+        "src": "images/gallery/tiere/17.jpg",
+        "alt": "Tiere – Foto 17",
+        "filename": "Turtle.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "stadt",
+    "path": "/stadt",
+    "title": "Stadt",
+    "photos": [
+      {
+        "src": "images/gallery/stadt/01.jpg",
+        "alt": "Stadt – Foto 01",
+        "filename": "A7_01919.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/02.jpg",
+        "alt": "Stadt – Foto 02",
+        "filename": "A7_01819.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/03.jpg",
+        "alt": "Stadt – Foto 03",
+        "filename": "A7_07365.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/04.jpg",
+        "alt": "Stadt – Foto 04",
+        "filename": "A7_07346.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/05.jpeg",
+        "alt": "Stadt – Foto 05",
+        "filename": "A7408630.jpeg"
+      },
+      {
+        "src": "images/gallery/stadt/06.jpg",
+        "alt": "Stadt – Foto 06",
+        "filename": "A7_00675.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/07.jpg",
+        "alt": "Stadt – Foto 07",
+        "filename": "A7_00936.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/08.jpg",
+        "alt": "Stadt – Foto 08",
+        "filename": "IMG_1334.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/09.jpg",
+        "alt": "Stadt – Foto 09",
+        "filename": "Hohenzollernbruecke1-1536x1024.jpg"
+      },
+      {
+        "src": "images/gallery/stadt/10.jpeg",
+        "alt": "Stadt – Foto 10",
+        "filename": "Severinsbruecke.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "abstrakt",
+    "path": "/abstrakt",
+    "title": "Abstrakt",
+    "photos": [
+      {
+        "src": "images/gallery/abstrakt/01.jpg",
+        "alt": "Abstrakt – Foto 01",
+        "filename": "A7_08039.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/02.jpg",
+        "alt": "Abstrakt – Foto 02",
+        "filename": "Running-fast.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/03.jpg",
+        "alt": "Abstrakt – Foto 03",
+        "filename": "A7_07312.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/04.jpg",
+        "alt": "Abstrakt – Foto 04",
+        "filename": "A7_07778.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/05.jpg",
+        "alt": "Abstrakt – Foto 05",
+        "filename": "A7_07383.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/06.jpg",
+        "alt": "Abstrakt – Foto 06",
+        "filename": "Spotlights-BW.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/07.jpg",
+        "alt": "Abstrakt – Foto 07",
+        "filename": "A7_07463-HDR-Bearbeitet.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/08.jpg",
+        "alt": "Abstrakt – Foto 08",
+        "filename": "A7_06696.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/09.jpg",
+        "alt": "Abstrakt – Foto 09",
+        "filename": "A7_08629.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/10.jpg",
+        "alt": "Abstrakt – Foto 10",
+        "filename": "A7_08243.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/11.jpg",
+        "alt": "Abstrakt – Foto 11",
+        "filename": "A7_07427-Bearbeitet.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/12.jpg",
+        "alt": "Abstrakt – Foto 12",
+        "filename": "Spiral.jpg"
+      },
+      {
+        "src": "images/gallery/abstrakt/13.jpg",
+        "alt": "Abstrakt – Foto 13",
+        "filename": "Wassertropfen-2.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "nacht",
+    "path": "/nacht",
+    "title": "Nacht",
+    "photos": [
+      {
+        "src": "images/gallery/nacht/01.jpeg",
+        "alt": "Nacht – Foto 01",
+        "filename": "A7408564.jpeg"
+      },
+      {
+        "src": "images/gallery/nacht/02.jpg",
+        "alt": "Nacht – Foto 02",
+        "filename": "A7_04958-Min-Horizon-Noise.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/03.jpg",
+        "alt": "Nacht – Foto 03",
+        "filename": "A7_05079-Min-Horizon-Noise.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/04.jpg",
+        "alt": "Nacht – Foto 04",
+        "filename": "A7_05013-Min-Horizon-Noise.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/05.jpg",
+        "alt": "Nacht – Foto 05",
+        "filename": "A7_00443.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/06.jpg",
+        "alt": "Nacht – Foto 06",
+        "filename": "A7_00500-stacked.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/07.jpg",
+        "alt": "Nacht – Foto 07",
+        "filename": "Startrail_Lindlar.jpg"
+      },
+      {
+        "src": "images/gallery/nacht/08.jpg",
+        "alt": "Nacht – Foto 08",
+        "filename": "A7_07718-Bearbeitet.jpg"
+      }
+    ]
+  }
+]

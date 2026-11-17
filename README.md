@@ -1,7 +1,8 @@
-# Marius Meyer — Fotografie
+# marius-meyer.org — Astro
 
-Eine responsive Astro-Demo für ein Fotografie-Portfolio, inspiriert vom
-[Astro Photography Portfolio](https://github.com/rockem/astro-photography-portfolio).
+Astro-Portierung der Website [marius-meyer.org](https://marius-meyer.org/) mit den
+Fotogalerien Landschaft, Tiere, Stadt, Abstrakt und Nacht sowie Über mich,
+Datenschutz und Impressum.
 
 ## Lokal starten
 
@@ -17,8 +18,8 @@ npm run build
 npm run preview
 ```
 
-Die Beispielbilder und Bildbeschreibungen liegen in `src/data/photos.ts`.
-Passe dort die Bild-URLs, Kategorien und Ortsangaben an deine eigenen Arbeiten an.
+Galerieinhalte liegen in `src/data/galleries.json`; die zugehörigen Bilddateien befinden
+sich unter `public/images/gallery/`.
 
 ## GitHub Pages
 

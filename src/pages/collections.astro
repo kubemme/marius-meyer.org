@@ -1,31 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { photos } from '../data/photos';
+import { galleryCategories, photos } from '../data/photos';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <Layout
-  title="Portfolio — Marius Meyer"
-  description="Ausgewählte Fotografien aus Natur, Reisen und urbanen Momenten."
+  title="Fotogalerien — Marius Meyer"
+  description="Landschaft, Tiere, Stadt, abstrakte Motive und Nachtfotografie von Marius Meyer."
+  activePage="collections"
 >
   <section class="collection-page">
     <div class="collection-heading">
-      <span class="eyebrow">Einblicke &amp; Augenblicke</span>
-      <h1 class="serif">Das <em>Portfolio.</em></h1>
-      <p>Orte, Begegnungen und kleine Momente, die mich unterwegs begleitet haben.</p>
+      <span class="eyebrow">Landschaft, Natur &amp; unterwegs</span>
+      <h1 class="serif">Bilder aus <em>meiner Welt.</em></h1>
+      <p>Fotografische Erinnerungen aus fünf Galerien und vielen Momenten unterwegs.</p>
     </div>
-    <div class="filters" aria-label="Portfolio filtern">
-      <button class="filter active" type="button" data-filter="Alle" aria-pressed="true">Alle <span>06</span></button>
-      <button class="filter" type="button" data-filter="Natur" aria-pressed="false">Natur</button>
-      <button class="filter" type="button" data-filter="Reise" aria-pressed="false">Reise</button>
-      <button class="filter" type="button" data-filter="Urban" aria-pressed="false">Urban</button>
+    <div class="filters" aria-label="Fotogalerien filtern">
+      <button class="filter active" type="button" data-filter="Alle" aria-pressed="true">
+        Alle <span>{String(photos.length).padStart(2, '0')}</span>
+      </button>
+      {galleryCategories.map((category) => (
+        <button class="filter" type="button" data-filter={category.slug} aria-pressed="false">
+          {category.title} <span>{String(category.count).padStart(2, '0')}</span>
+        </button>
+      ))}
     </div>
     <div class="gallery">
       {photos.map((photo, index) => (
-        <article class="gallery-item" data-category={photo.category}>
-          <div class="gallery-image">
-            <img src={photo.image} alt={photo.alt} loading={index < 2 ? 'eager' : 'lazy'} />
-            <span class="gallery-index">{String(index + 1).padStart(2, '0')}</span>
-          </div>
+        <article class="gallery-item" data-category={photo.categorySlug}>
+          <a class="gallery-image" href={`${base}${photo.image}`} aria-label={`Foto öffnen: ${photo.alt}`}>
+            <img src={`${base}${photo.image}`} alt={photo.alt} loading={index < 6 ? 'eager' : 'lazy'} />
+          </a>
           <div class="gallery-meta">
             <div><h2 class="serif">{photo.title}</h2><p>{photo.location}</p></div>
             <span>{photo.category}</span>
@@ -40,19 +48,25 @@ import { photos } from '../data/photos';
   const filters = document.querySelectorAll<HTMLButtonElement>('.filter');
   const items = document.querySelectorAll<HTMLElement>('.gallery-item');
 
-  filters.forEach((filter) => {
-    filter.addEventListener('click', () => {
-      const category = filter.dataset.filter;
-      filters.forEach((button) => {
-        const selected = button === filter;
-        button.classList.toggle('active', selected);
-        button.setAttribute('aria-pressed', String(selected));
-      });
-      items.forEach((item) => {
-        item.hidden = category !== 'Alle' && item.dataset.category !== category;
-      });
+  const applyFilter = (category: string) => {
+    filters.forEach((button) => {
+      const selected = button.dataset.filter === category;
+      button.classList.toggle('active', selected);
+      button.setAttribute('aria-pressed', String(selected));
     });
+    items.forEach((item) => {
+      item.hidden = category !== 'Alle' && item.dataset.category !== category;
+    });
+  };
+
+  filters.forEach((filter) => {
+    filter.addEventListener('click', () => applyFilter(filter.dataset.filter ?? 'Alle'));
   });
+
+  const requestedCategory = new URLSearchParams(window.location.search).get('category');
+  if ([...filters].some((filter) => filter.dataset.filter === requestedCategory)) {
+    applyFilter(requestedCategory!);
+  }
 </script>
 
 <style>
@@ -62,16 +76,15 @@ import { photos } from '../data/photos';
   h1 { margin: 20px 0 12px; font-size: clamp(55px, 7vw, 88px); line-height: 1; letter-spacing: -.06em; }
   h1 em { color: var(--accent); font-weight: 500; }
   .collection-heading p { max-width: 410px; margin: 0 auto; color: var(--muted); font-size: 12px; line-height: 1.8; }
-  .filters { display: flex; justify-content: center; gap: 30px; margin: 54px 0 38px; }
+  .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px 30px; margin: 54px 0 38px; }
   .filter { border: 0; padding: 0 0 8px; background: transparent; color: var(--muted); font-size: 11px; cursor: pointer; }
   .filter.active { border-bottom: 1px solid var(--accent); color: var(--ink); }
   .filter span { padding-left: 5px; color: var(--accent); font-size: 9px; }
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 20px; }
   .gallery-item[hidden] { display: none; }
-  .gallery-image { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #e5e2d9; }
+  .gallery-image { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #e5e2d9; }
   .gallery-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
   .gallery-item:hover img { transform: scale(1.03); }
-  .gallery-index { position: absolute; left: 12px; bottom: 12px; color: white; font-size: 9px; text-shadow: 0 1px 4px #000; }
   .gallery-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; padding-top: 13px; }
   .gallery-meta h2 { margin: 0 0 5px; font-size: 17px; font-weight: 500; }
   .gallery-meta p, .gallery-meta > span { margin: 0; color: var(--muted); font-size: 10px; }
@@ -79,10 +92,10 @@ import { photos } from '../data/photos';
   @media (max-width: 750px) {
     .collection-page { padding: 70px 6% 90px; }
     .gallery { grid-template-columns: repeat(2, 1fr); gap: 30px 13px; }
-    .filters { gap: 23px; margin: 39px 0 27px; }
+    .filters { gap: 15px 23px; margin: 39px 0 27px; }
   }
   @media (max-width: 390px) {
     .gallery { grid-template-columns: 1fr; }
-    .filters { gap: 16px; }
+    .filters { gap: 12px 16px; }
   }
 </style>
