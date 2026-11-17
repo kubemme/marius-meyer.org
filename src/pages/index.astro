@@ -22,7 +22,7 @@ const featuredPhotos = galleryCategories.map((category) => ({
       <p class="hero-description">
         Das bin ich, Marius – Hobbyfotograf aus der Nähe von Köln.
       </p>
-      <a class="text-link" href={`${base}about/`}>Über mich <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href={`${base}about/`}>Über mich</a>
     </div>
     <div class="hero-image-wrap">
       <img
@@ -43,7 +43,7 @@ const featuredPhotos = galleryCategories.map((category) => ({
           Landschaft, Tiere, Stadt, Nacht und abstrakte Motive.
         </p>
       </div>
-      <a class="text-link" href={`${base}collections/`}>Alle {photos.length} Fotos <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href={`${base}collections/`}>Alle {photos.length} Fotos</a>
     </div>
     <div class="featured-grid">
       {featuredPhotos.map((photo, index) => (
@@ -56,7 +56,6 @@ const featuredPhotos = galleryCategories.map((category) => ({
             style={`--photo-image: url('${base}${photo.image}')`}
           >
             <img src={`${base}${photo.image}`} alt={photo.alt} loading="lazy" />
-            <span class="photo-arrow" aria-hidden="true">↗</span>
           </div>
           <div class="photo-meta">
             <div><h3>{photo.title}</h3><span>{photo.location}</span></div>
@@ -82,7 +81,7 @@ const featuredPhotos = galleryCategories.map((category) => ({
   .image-caption { position: absolute; right: 18px; bottom: 17px; color: white; font-size: 9px; letter-spacing: .13em; text-shadow: 0 1px 5px #000; }
   .scroll-hint { position: absolute; bottom: 35px; left: 7.2%; display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 10px; }
   .scroll-hint span { width: 30px; height: 1px; background: var(--accent); }
-  .intro { padding: 120px 10% 128px; }
+  .intro { padding: 0 10% 128px; }
   .section-label { display: flex; gap: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 10px; }
   .section-label span { color: var(--accent); }
   .intro-main { display: flex; align-items: end; justify-content: space-between; margin: 34px 0 46px; }
@@ -106,8 +105,6 @@ const featuredPhotos = galleryCategories.map((category) => ({
     position: relative; z-index: 1; width: auto; max-width: 100%; height: 100%; object-fit: contain;
   }
   .photo-card:hover .photo-frame img { transform: scale(1.035); }
-  .photo-arrow { position: absolute; z-index: 2; right: 13px; bottom: 13px; display: grid; place-items: center; width: 35px; height: 35px; background: var(--paper); border-radius: 50%; opacity: 0; transform: translateY(5px); transition: .25s ease; }
-  .photo-card:hover .photo-arrow { opacity: 1; transform: translateY(0); }
   .photo-meta { display: flex; justify-content: space-between; gap: 10px; padding-top: 15px; }
   .photo-meta h3 { margin: 0 0 5px; font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 500; }
   .photo-meta span { color: var(--muted); font-size: 10px; }
